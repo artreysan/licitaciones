@@ -1,0 +1,12 @@
+23 08 2022 14:23:08: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+-- Query name: UserByID
+-- Query str: SELECT * FROM usuarios WHERE idUsuario= 
+
+01 10 2022 02:04:54: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+-- Query name: UserByID
+-- Query str: SELECT * FROM usuarios WHERE idUsuario= 
+
+01 10 2022 03:32:26: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+-- Query name: UserByID
+-- Query str: SELECT * FROM usuarios WHERE idUsuario= 
+

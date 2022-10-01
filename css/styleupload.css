@@ -1,0 +1,70 @@
+.uploadArea{ min-height:300px; height:auto; border:1px dotted #ccc; padding:10px; cursor:move; margin-bottom:10px; position:relative;}
+h1, h5{ padding:0px; margin:0px; }
+h1.title{ font-family:'Boogaloo', cursive; padding:10px; }
+.uploadArea h1{ color:#ccc; width:100%; z-index:0; text-align:center; vertical-align:middle; position:absolute; top:25px;}
+.dfiles{ clear:both; border:1px solid #ccc; background-color:#E4E4E4; padding:3px;  position:relative; height:25px; margin:3px; z-index:1; width:97%; opacity:0.6; cursor:default;}
+h5{ width:95%; line-height:25px;}
+h5, h5 img {  float:left;  }
+.invalid { border:1px solid red !important; }
+.buttonUpload { display:inline-block; padding: 4px 10px 4px; text-align: center; text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); background-color: #0074cc; -webkit-border-radius: 4px;-moz-border-radius: 4px; border-radius: 4px; border-color: #e6e6e6 #e6e6e6 #bfbfbf; border: 1px solid #cccccc; color:#fff; }
+.progress img{ margin-top:7px; margin-left:24px; }
+/*
+.uploadArea{ 
+    min-height: 250px;
+    width: 90%;
+    height: auto;
+    border: 1px dotted #979797;
+    padding: 10px;
+    cursor: move;
+    margin-bottom: 10px;
+    position: relative;
+}
+h1, h5{ 
+    padding:0px !important; 
+    margin:0px !important;  
+}
+.uploadArea h1{ 
+    color:#ccc; 
+    width:100%; 
+    z-index:0; 
+    text-align:center; 
+    vertical-align:middle; 
+    position:absolute; 
+    top:25px;
+}
+.dfiles{    
+    border:1px solid #ccc; 
+    background-color:#E4E4E4;     
+    height:30px;     
+    z-index:1;     
+    opacity:0.9; 
+    cursor:default;
+}
+h5{ 
+    width:95%; 
+    line-height:25px;
+}
+h5, h5 img {  float:left;  }
+.invalid { border:1px solid red !important; }
+.progress img{ 
+    margin-top:7px; 
+    margin-left:24px; 
+}
+*/
+
+.resumenArchivos{
+    padding: 10px;
+}
+.tituloResumenarchivos{
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+.subResumenArchivos label{
+    /*font-weight: bold;*/
+}
+.subResumenArchivos span{    
+    font-weight: bold;
+}
+#archivosNosubidos{
+    padding: 3px 20px;
+}

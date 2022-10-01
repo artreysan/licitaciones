@@ -1,0 +1,100 @@
+22 09 2020 09:49:04: 
+-- Query name: LoginUser
+-- Query str: SELECT * FROM usuarios WHERE email='superadmin@framelova.com' AND password='superadmin_pass'
+
+01 08 2022 09:49:40: Unknown column 'email' in 'where clause'
+-- Query name: LoginUser
+-- Query str: SELECT * FROM usuarios WHERE email='iracema.miron@sct.gob.mx' AND password='12345'
+
+01 08 2022 09:49:50: Unknown column 'email' in 'where clause'
+-- Query name: LoginUser
+-- Query str: SELECT * FROM usuarios WHERE email='iracema.miron@sct.gob.mx' AND password='12345'
+
+01 08 2022 09:52:09: Unknown column 'email' in 'where clause'
+-- Query name: LoginUser
+-- Query str: SELECT * FROM usuarios WHERE email='iracema.miron@sct.gob.mx' AND password='12345'
+
+01 08 2022 09:58:19: Unknown column 'email' in 'where clause'
+-- Query name: LoginUser
+-- Query str: SELECT * FROM usuarios WHERE email='iracema.miron@sct.gob.mx' AND password='12345'
+
+01 08 2022 09:58:55: Unknown column 'email' in 'where clause'
+-- Query name: LoginUser
+-- Query str: SELECT * FROM usuarios WHERE email='iracema.miron@sct.gob.mx' AND password='12345'
+
+01 08 2022 09:59:11: Unknown column 'email' in 'where clause'
+-- Query name: LoginUser
+-- Query str: SELECT * FROM usuarios WHERE email='iracema.miron@sct.gob.mx' AND password='12345'
+
+01 08 2022 10:00:46: Unknown column 'email' in 'where clause'
+-- Query name: LoginUser
+-- Query str: SELECT * FROM usuarios WHERE email='iracema.miron@sct.gob.mx' AND password='12345'
+
+01 08 2022 10:00:48: Unknown column 'email' in 'where clause'
+-- Query name: LoginUser
+-- Query str: SELECT * FROM usuarios WHERE email='iracema.miron@sct.gob.mx' AND password='12345'
+
+02 08 2022 09:27:50: Column 'idUnAd' in where clause is ambiguous
+-- Query name: GetAllLicitaciones
+-- Query str: 
+      SELECT a.*, b.nombre, c.unidadAdmin   
+      FROM licitaciones a
+      LEFT JOIN usuarios b ON b.idUsuario = a.idUsuario 
+      LEFT JOIN unidad_admin c ON c.idUniAd = a.idUnAd
+       WHERE idUnAd IN (1) 
+    
+
+02 08 2022 09:27:51: Column 'idUnAd' in where clause is ambiguous
+-- Query name: GetAllLicitaciones
+-- Query str: 
+      SELECT a.*, b.nombre, c.unidadAdmin   
+      FROM licitaciones a
+      LEFT JOIN usuarios b ON b.idUsuario = a.idUsuario 
+      LEFT JOIN unidad_admin c ON c.idUniAd = a.idUnAd
+       WHERE idUnAd IN (1) 
+    
+
+02 08 2022 09:28:19: Column 'idUnAd' in where clause is ambiguous
+-- Query name: GetAllLicitaciones
+-- Query str: 
+      SELECT a.*, b.nombre, c.unidadAdmin   
+      FROM licitaciones a
+      LEFT JOIN usuarios b ON b.idUsuario = a.idUsuario 
+      LEFT JOIN unidad_admin c ON c.idUniAd = a.idUnAd
+       WHERE idUnAd IN (1) 
+    
+
+02 08 2022 09:31:57: Column 'idUnAd' in where clause is ambiguous
+-- Query name: GetAllLicitaciones
+-- Query str: 
+      SELECT a.*, b.nombre, c.unidadAdmin   
+      FROM licitaciones a
+      LEFT JOIN usuarios b ON b.idUsuario = a.idUsuario 
+      LEFT JOIN unidad_admin c ON c.idUniAd = a.idUnAd
+       WHERE idUnAd IN (1) 
+    
+
+02 08 2022 09:33:03: Column 'idUnAd' in where clause is ambiguous
+-- Query name: GetAllLicitaciones
+-- Query str: 
+      SELECT a.*, b.nombre, c.unidadAdmin   
+      FROM licitaciones a
+      LEFT JOIN usuarios b ON b.idUsuario = a.idUsuario 
+      LEFT JOIN unidad_admin c ON c.idUniAd = a.idUnAd 
+       WHERE idUnAd IN (1) 
+    
+
+02 08 2022 09:33:36: Column 'idUnAd' in where clause is ambiguous
+-- Query name: GetAllLicitaciones
+-- Query str: 
+      SELECT a.*, b.nombre, c.unidadAdmin   
+      FROM licitaciones a
+      LEFT JOIN usuarios b ON b.idUsuario = a.idUsuario 
+      LEFT JOIN unidad_admin c ON c.idUniAd = a.idUnAd 
+       WHERE idUnAd IN (1) 
+    
+
+02 08 2022 10:12:53: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '1' at line 1
+-- Query name: obtenerUnidadByIdDB
+-- Query str: 1
+

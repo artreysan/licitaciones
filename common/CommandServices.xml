@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Commands>
+
+  <!-- Aumentar maximo del group concat -->
+  <Command id="MaximoGroupConcat">
+    <query> SET SESSION GROUP_CONCAT_MAX_LEN = 1000000 </query>
+  </Command>
+  <Command id="IdiomaEspanol">
+    <query> SET lc_time_names = 'es_ES'; </query>
+  </Command>
+
+
+  <!--Consultas roles -->
+  <Command id="GetAllRoles">
+    <query>SELECT * FROM roles ?</query>
+  </Command>
+  <Command id="obtenerRolByIdDB">
+    <query>SELECT * FROM roles WHERE idRol=?</query>
+  </Command>
+  <Command id="updateRolGrid">
+    <query>UPDATE roles SET rol='@rol' WHERE idRol=@idRol </query>
+  </Command>
+  <Command id="insertRolGrid">
+    <query>INSERT INTO roles (rol, fechaCreacion) VALUES ('@rol', NOW())</query>
+  </Command>
+  <Command id="deleteRolesGrid">
+    <query>DELETE FROM roles WHERE idRol=@idRol </query>
+  </Command>
+
+
+  <!--Consultas usuarios -->
+  <Command id="LoginUser">
+    <query>SELECT * FROM usuarios WHERE correo='?' AND password='?'</query>
+  </Command>
+  <Command id="UserByID">
+    <query>SELECT * FROM usuarios WHERE idUsuario=?</query>
+  </Command>
+  <Command id="getUsersForGrid">
+    <query>
+      SELECT A.*,
+      IF(A.activo=1,'Si','No') AS usuarioActivo,
+      IF(A.activo=1,'activar.jpg','desactivar.png') AS nombreImg,
+      IF(A.idRol=5, 'mLinkH' ,'oLinkH') AS accionHorario
+      FROM usuarios A
+      ?
+      ORDER BY A.idRol
+    </query>
+  </Command>
+  <!-- <Command id="updateUserGrid">
+    <query>UPDATE usuarios SET idRol='@idRol', nombre='@nombre', email='@email', password='@password' WHERE idUsuario=@idUsuario </query>
+  </Command>-->
+  <Command id="deleteUserGrid">
+    <query>DELETE FROM usuarios WHERE idUsuario=@idUsuario </query>
+  </Command>
+  <!--
+  <Command id="insertUserGrid">
+    <query>INSERT INTO usuarios (idRol, nombre, email, password, fechaCreacion) VALUES ('@idRol', '@nombre', '@email', '@password', NOW())</query>
+  </Command> -->
+  <Command id="ObtTodosUsuariosDB">
+    <query>SELECT * FROM usuarios ? ORDER BY nombre ASC</query>
+  </Command>
+
+  <Command id="ObtUsuariosRolSucursalDB">
+    <query>SELECT * FROM usuarios ?</query>
+  </Command>
+  <Command id="UserByEmailDB">
+    <query>SELECT * FROM usuarios WHERE email='?' limit 0,1</query>
+  </Command>
+  <Command id="updateUsuarioDB">
+    <query>UPDATE usuarios SET ?='?' WHERE idUsuario=?</query>
+  </Command>
+  <Command id="insertUsuarioDB">
+    <query>INSERT INTO usuarios (idRol, sucursalId, nombre, email, password, activo, celular, fechaCreacion) VALUES (?, ?, '?', '?', '?', '?', '?', '?')</query>
+  </Command>
+  <Command id="actualizarUsuarioDB">
+    <query>UPDATE usuarios SET idRol=?, sucursalId=?, nombre='?', email='?', password='?', activo='?', celular='?', fechaAct='?' WHERE idUsuario=?</query>
+  </Command>
+  <Command id="deleteUsuarioDB">
+    <query>DELETE FROM usuarios WHERE idUsuario=? </query>
+  </Command>
+  <Command id="UsuarioPorClaveTipoDB">
+    <query>SELECT * FROM usuarios WHERE password='?' AND tipoRegistro='?' limit 0,1</query>
+  </Command>
+
+
+
+  <Command id="insertLicitacionDB">
+    <query>INSERT INTO licitaciones (idUnAd, idUsuario, licitacion, activo) VALUES (?, ?, '?', ?)</query>
+  </Command>
+
+  <Command id="GetAllLicitaciones">
+    <query>
+      SELECT a.*, b.nombre, c.unidadAdmin   
+      FROM licitaciones a
+      LEFT JOIN usuarios b ON b.idUsuario = a.idUsuario 
+      LEFT JOIN unidad_admin c ON c.idUniAd = a.idUnAd 
+      ?
+    </query>
+  </Command>
+
+  <Command id="obtenerLicitacionByIdDB">
+    <query>SELECT * FROM licitaciones WHERE idLicitacion=?</query>
+  </Command>
+  <Command id="insertDocumentoDB">
+    <query>INSERT INTO docs_licitaciones (idUsuario, idLicitacion, nombreDoc, documento, publicado) VALUES (?, ?, '?', '?', ?)</query>
+  </Command>
+
+  <Command id="obtAllDocsLicitacionBD">
+    <query>
+      SELECT a.*  
+      FROM docs_licitaciones a
+      ?
+    </query>
+  </Command>
+
+  <Command id="GetAllUnidades">
+    <query>
+      SELECT a.*  
+      FROM unidad_admin a
+      ?
+    </query>
+  </Command>
+  <Command id="obtenerUnidadByIdDB">
+    <query>SELECT * FROM unidad_admin WHERE idUniAd=?</query>
+  </Command>
+
+</Commands>

@@ -1,0 +1,27 @@
+.pull-right {
+    float: right!important;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+}
+
+li {
+    list-style: none;
+}
+li.li_menu {
+    background: #2a2c2b;
+    border-bottom: 1px solid #fff;
+}
+li.li_menu a {
+    color: #fff;
+    font-size: 14px !important;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-left: 2px;
+    text-decoration: none;
+}
+span.licitacion {
+    font-size: 35px;
+    font-weight: 500;
+    color: #46916e;
+}
