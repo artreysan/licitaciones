@@ -1,10 +1,23 @@
 <?php
 include_once 'common/screenPortions.php';
 include_once 'brules/unidadAdminObj.php';
+include_once 'brules/licitacionesObj.php';
+include_once 'brules/docsLicitacionesObj.php';
+///*
 
+//*/
+
+/*
 $unidadAdminObj = new unidadAdminObj();
 $allUnidades = $unidadAdminObj->GetAllUnidades("");
+*/
 
+///*
+$docsLicitacionesObj = new docsLicitacionesObj();
+$licitacionesObj = new licitacionesObj();
+
+$allDocsLici = $docsLicitacionesObj->obtAllDocsLicitacion("");
+//*/
 
 /*echo "<pre>";
 print_r($allUnidades);
@@ -39,7 +52,27 @@ echo "</pre>";*/
                 <div class="login-form">
                     <br><br>
                     <h2>LICITACIONES</h2>
-                    
+                    <!-- -->
+                    <div class="row">
+                        <div class="list_unidades">
+                                <?php foreach ($allDocsLici as $item) { 
+                                ?>
+                                    
+                                <div class="banners">
+                                    <label><?php echo $item->nombreDoc; ?></label>
+                                    <a href="uploads/licitaciones/<?php echo $item->documento; ?>" download="<?php echo $item->documento; ?>">
+                                        <img src="images/download.png" width="40px">
+                                    </a>
+                                </div>
+
+                                <?php
+                                } ?> 
+                            <br>
+                        </div>
+                    </div>       
+                    <!-- -->
+
+                    <!--
                     <div class="row">
                         <div class="list_unidades">
                             <?php foreach ($allUnidades as $item) { ?>
@@ -48,7 +81,8 @@ echo "</pre>";*/
 
                             <?php } ?>
                         </div>
-                    </div>                        
+                    </div>    
+                     -->                    
                 </div>				
             </div>            
         </div>

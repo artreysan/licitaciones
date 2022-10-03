@@ -51,6 +51,8 @@ class usuariosObj {
         return $array;
     }
 
+    public function 
+
     //logueo de usuario
     public function LoginUser($email, $password){
         $usrDS = new usuariosBD();

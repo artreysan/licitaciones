@@ -6,9 +6,9 @@
  */
 
 $cfg_server='127.0.0.1';
-$cfg_user='arturo';
+$cfg_user='root';
 $cfg_db='licitaciones_db';
-$cfg_pw='beartree';
+$cfg_pw='';
 $siteURL='http://localhost/licitaciones_v2/';
 
 

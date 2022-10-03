@@ -41,6 +41,7 @@ $datosUsr = $usuariosObj->UserByID($_SESSION['idUsuario']);
                             <li class="li_menu licitaciones"><a href="listLicitaciones.php">Licitaciones</a></li>
                             <li class="li_menu new_licitacion"><a href="frmLicitacion.php">Nueva Licitaci&oacute;n</a></li>
                             <li class="li_menu salir"><a href="logout.php">Salir</a></li>
+                            <li class="li_menu crear"><a href="register.php">Crear usuario</a></li>
                         </ul>
                     </div>
                     <div class="col-md-10">
