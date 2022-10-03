@@ -51,7 +51,7 @@ echo "</pre>";*/
 				<!-- <div class="logo"><a href="index.php"><img src="images/logo.jpg" /></a></div> -->
                 <div class="login-form">
                     <br><br>
-                    <h2>LICITACIONES</h2>
+                    <h2>Sintesis informativa</h2>
                     <!-- -->
                     <div class="row">
                         <div class="list_unidades">
